@@ -1,0 +1,8 @@
+FROM mariadb:10.5
+LABEL author="francisco"
+ENV MYSQL_ROOT_PASSWORD "francisco21"
+ENV MYSQL_DATABASE "semana18"
+ENV MYSQL_USER "francisco"
+ENV MYSQL_PASSWORD "francisco21"
+COPY Users.sql /docker-entrypoint-initdb.d/
+EXPOSE 3306
